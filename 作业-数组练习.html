@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var fruits,text,fLen,i;
+        fruits =["Banana","Orange","Apple","Mango"];
+        fruits.push( "Lemon" );
+        fLen = fruits.length;
+        fruits[fLen] = "Pinapple"
+        fruits.sort(); 
+        fruits.reverse();
+        text = "<ul>";
+        for (i=0;i <= fLen; i++) {
+            text +="<li> "+ fruits[i] + "</li>";
+        }
+        var points = [40,100,1,5,25,10];
+        points.sort(function(a,b) {
+           return a - b
+        }); 
+        var cars = [{
+        type:"Volvo",year:2016},
+        { type: "Saab",year: 2001},
+        {type:"Bw",year: 2010}];
+        cars.sort(function(a,b){
+        return a.year - b.year});
+        var txt = "";
+        var numbers = [4,9,16,25];
+        numbers.forEach(myFunction);
+        function mybunction(value,index) {
+            txt = txt + "index" + index + ":" + value + "<br>";}
+        var divv1 = document.getElementById("fruits");
+        divv1.innerHTML = text;
+
+        var divv2 = document.getElementById("points");
+        divv2.innerHTML = points;
+
+        var divv3 = document.getElementById("cars");
+        divv3.innerHTML =
+              cars[0].type + ":" +cars[0].year + "<br>" +
+              cars[1].type + ":" +cars[1].year + "<br>" +
+              cars[2].type + ":" + cars[2].year+ "<br>";
+
+        var divv4 = document.getElementById( "array" );
+        divv4.innerHTML = txt;
+</script>
+</html>
+
+        
+</body>
+</html>
